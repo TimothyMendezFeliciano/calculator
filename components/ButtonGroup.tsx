@@ -1,5 +1,5 @@
-import {OperandInterface} from "@/utils/constants";
 import {Dispatch, SetStateAction} from "react";
+import {OperandInterface} from "@/models/OperandInterface";
 
 interface Props {
     operands: OperandInterface[]
