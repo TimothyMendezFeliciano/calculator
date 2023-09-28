@@ -32,7 +32,6 @@ export default function Home({data}) {
 
 
     const {history, retry} = useGetHistory(data)
-    console.log('History', history)
     const [inputA, setInputA] = useState<number>(0)
     const [inputB, setInputB] = useState<number>(0)
     const [operand, setOperand] = useState<string>('addition')

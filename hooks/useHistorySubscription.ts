@@ -15,17 +15,14 @@ export default function useHistorySubscription() {
             })
 
             const {payload} = await response.json()
-            console.log('SubscriptionPayload', payload)
             const allCalculations: Calculator[] = payload.data;
 
             const history: string[] = allCalculations.map(item =>
                 `${item.inputA} ${item.operand} ${item.inputB} = ${item.result}`)
-            console.log("SubscriptionHistory", history)
             event.emit("data", history)
         }
 
         if (num === 0 || num % 3 === 0) {
-            console.log("Going In???", num)
             fetchHistory()
         } else {
             event.emit("error", "No Lookup")
